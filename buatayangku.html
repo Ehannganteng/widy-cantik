@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Love Messages for My Dear</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #0f0c29;  
+            background: -webkit-linear-gradient(to right, #302b63, #24243e); 
+            background: linear-gradient(to right, #302b63, #24243e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        #openButton {
+            position: relative;
+            z-index: 1;
+            padding: 15px 30px;
+            background-color: #ff79c6;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #openButton:hover {
+            background-color: #ff92d1;
+        }
+
+        .popup {
+            position: absolute;
+            display: none;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            text-align: center;
+            z-index: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .popup h2 {
+            color: #ff79c6;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .popup p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .popup img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 3px solid #ff79c6;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 5px solid #ff79c6;
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            background-color: #ff79c6;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #ff92d1;
+        }
+
+        .show-popup {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 768px) {
+            .popup h2 {
+                font-size: 2rem;
+            }
+
+            .popup p {
+                font-size: 1rem;
+            }
+
+            .popup img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .popup button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .photo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <button id="openButton">Open Special Messages for You!</button>
+
+    <div class="popup" id="lovePopup">
+        <!-- Image of your loved one (Ayang) -->
+        <img class="photo" src="https://github.com/Ehannganteng/superw/blob/main/IMG_0751.JPG?raw=true" alt="Ayang's Photo">
+
+        <h2>Dear Love...</h2>
+        <p id="message">Click a button to see a special message!</p>
+        <div>
+            <button class="messageButton" data-message="You are my sunshine on the darkest days. I am so lucky to have you!">Message 1</button>
+            <button class="messageButton" data-message="Every moment with you is a treasure I hold close to my heart.">Message 2</button>
+            <button class="messageButton" data-message="You make my world brighter just by being in it.">Message 3</button>
+            <button class="messageButton" data-message="No matter where life takes us, my love for you will never fade.">Message 4</button>
+            <button class="messageButton" data-message="I fall in love with you all over again every time I see you.">Message 5</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particle.js background effect
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ff79c6"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#ff79c6"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ff79c6",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Show popup when button clicked
+        const openButton = document.getElementById('openButton');
+        const lovePopup = document.getElementById('lovePopup');
+        const messageParagraph = document.getElementById('message');
+        const messageButtons = document.querySelectorAll('.messageButton');
+
+        openButton.addEventListener('click', function () {
+            lovePopup.classList.add('show-popup');
+        });
+
+        // Show different messages when buttons are clicked
+        messageButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const newMessage = this.getAttribute('data-message');
+                messageParagraph.textContent = newMessage;
+            });
+        });
+    </script>
+
+</body>
+</html>
